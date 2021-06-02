@@ -24,14 +24,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
         
-   pmd:
-  
-      runs-on: ubuntu-latest
-    
-    steps:
-      - uses: sfdx-actions/setup-pmd@v1
-      - name: run-pmd
-        run: pmd -d ./force-app/main/default/classes -R category/apex/design.xml -f text
  
         
 
